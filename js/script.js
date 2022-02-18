@@ -56,5 +56,4 @@ function saveUpdateValue(boxID) {
     let saveAmount = (inputAmount * parseFloat(totalBalance.innerText)) / 100;
     savingAmount.innerText = saveAmount;
     remainingBalance.innerText = parseFloat(totalBalance.innerText) - parseFloat(savingAmount.innerText);
-
 }
