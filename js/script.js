@@ -53,7 +53,13 @@ function saveUpdateValue(boxID) {
         remainingBalance.innerText = '0';
         return alert('Please input valid number')
     }
+
     let saveAmount = (inputAmount * parseFloat(totalBalance.innerText)) / 100;
+    if (saveAmount > totalBalance.innerText) {
+        savingAmount.innerText = '0';
+        remainingBalance.innerText = '0';
+        return alert('Your saving amount is greater than total balance amount')
+    }
     savingAmount.innerText = saveAmount;
     remainingBalance.innerText = parseFloat(totalBalance.innerText) - parseFloat(savingAmount.innerText);
 }
